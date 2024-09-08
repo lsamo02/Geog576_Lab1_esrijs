@@ -15,7 +15,8 @@
     require([
       "esri/config", 
       "esri/Map", 
-      "esri/views/MapView"
+      "esri/views/MapView",
+      "esri/widgets/BasemapGallery"
     ], function(esriConfig, Map, MapView) {   
 
       esriConfig.apiKey= "AAPTxy8BH1VEsoebNVZXo8HurOxCJM2SBFdn7xcvT1L38mvM8JqyGgY9I6ZreW_-CskCek5wBVwF7SEueg9kN6l8kkJXzv1l1OMA060-IPeO302BssrSrxYedw9j4tTgXYeam0aL0P3vclOI4HjPaMmO3pQweizFCRuDTWSVP42Vualv70iB8JLH7wMbh4v9QoxW_wZvHni7MCbxYsBO_7lPlXYTEHvezn4AyvYiYeVWFfx-TxXUAoY19Z4ueRRW_UTsAT1_DalpM85W";
@@ -25,12 +26,18 @@
       
       const view = new MapView({
         map: map,
-        center: [-122.40111922002323, 37.775978202622646], // Longitude, latitude
+        center: [-122.40111922002323, 37.775978202622646], // Longitude, latitude for San Francisco
         zoom: 10, // Zoom level
         container: "viewDiv" // Div element
       });
 
-    });  
+      const basemapGallery = new BasemapGallery({
+          view: view
+        });
+
+      view.ui.add(basemapGallery, {position:"bottom-right"});
+
+    }); 
    </script>
 
   <!--css to make a fll screen map -->
