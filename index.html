@@ -8,7 +8,7 @@
   
   <!--calls for arcgis API's css file and JS library -->
   <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.25/"></script>
+  <script src="https://js.arcgis.com/4.30/"></script>
 
   <!--adds modules required for full screen map app-->
   <script>  
@@ -35,7 +35,9 @@
           view: view
         });
 
-      view.ui.add(basemapGallery, {position:"bottom-right"});
+      view.ui.add(basemapGallery, {
+        position:"bottom-right"
+      });
 
     }); 
    </script>
