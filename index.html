@@ -8,7 +8,7 @@
   
   <!--calls for arcgis API's css file and JS library -->
   <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.30/"></script>
+  <script src="https://js.arcgis.com/4.25/"></script>
 
   <!--adds modules required for full screen map app-->
   <script>  
@@ -17,7 +17,7 @@
       "esri/Map", 
       "esri/views/MapView",
       "esri/widgets/BasemapGallery"
-    ], function(esriConfig, Map, MapView) {   
+    ], function(esriConfig, Map, MapView, BasemapGallery) {   
 
       esriConfig.apiKey= "AAPTxy8BH1VEsoebNVZXo8HurOxCJM2SBFdn7xcvT1L38mvM8JqyGgY9I6ZreW_-CskCek5wBVwF7SEueg9kN6l8kkJXzv1l1OMA060-IPeO302BssrSrxYedw9j4tTgXYeam0aL0P3vclOI4HjPaMmO3pQweizFCRuDTWSVP42Vualv70iB8JLH7wMbh4v9QoxW_wZvHni7MCbxYsBO_7lPlXYTEHvezn4AyvYiYeVWFfx-TxXUAoY19Z4ueRRW_UTsAT1_DalpM85W";
       const map= new Map({
